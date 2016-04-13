@@ -1,0 +1,14 @@
+{
+  "name": "munchkinbot",
+  "version": "1.0.0",
+  "description": "An IRC bot for playing Munchkin. Also, my first node project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tennu config.json -v"
+  },
+  "author": "Robert Tierney",
+  "license": "MIT",
+  "dependencies": {
+    "tennu": "^4.8.0"
+  }
+}

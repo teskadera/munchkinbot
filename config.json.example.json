@@ -1,0 +1,15 @@
+{
+    "server": "irc.your.server",
+    "tls": true,
+    "port": 6667,
+    "password": null,
+    "nicknames": ["MunchkinBot"],
+    "username": "munckinbot",
+    "realname": "MunchkinBot",
+    "channels": ["#munchkin"],
+    "nickserv": "nickserv",
+    "auth-password": null,
+    "plugins": ["munchkin", "cardmanager"],
+    "command-trigger": "!",
+    "disable-help": false
+}
