@@ -26,49 +26,79 @@ This will hold some information as to the state of the game. Maybe what players 
 ## Setup commands
 
 `start [optional: time]` - Begin a timer with announcements on the minute, trying to get six players. Autojoins person saying it. At the end of the timer, it will begin the game. Time is is integer minutes, defaults to five minutes.
+
 `startwith [minimum]` - Tell the bot to start a game once a certain number of people have joined.
+
 `kick [name]` - If said by admin or bot owner, kicks a given player from the queue and prevents them from rejoining that game.
+
 `ban [name]` - If said by admin or bot owner, bans a player from even interacting with the bot.
+
 `join [character sex] [color]` - If game queue is open and user is not already in it, adds them. Characters may only be woman or man; picking one of Red, Blue, Green, Orange, Yellow, or Purple as their color. Only one person may choose a given color. Invalid arguments will not be processed.
+
 `quit` - If user is in game queue or in game, removes them from it. Configuration option allows maximum number of quits per time period; to prevent people from ragequitting too many times. *Unsure as to how this will be implemented.*
 
 ## Pre-Gameplay Setup commands
+
 `imfirst` - Registers first player. 
+
 `first [name]` - Game starter or admin or bot owner can register first player.
+
 `imnext` - Registers next player.
+
 `next [name]` - Game starter or admin or bot owner can register next player.
 
 ## Bickering-solvers that would be neat features
+
 `coinflip [name]` - Performs a coinflip with the other person, allowing the other person to choose heads/tails. 
+
 `drawcards highlow` -  Shuffle deck of cards, players start in order from highest to lowest.
+
 `drawcards lowhigh` -  Shuffle deck of cards, players start in order from lowest to highest.
+
 `rockpaperscissors [name]` - Players have an RPS showdown.
 
 ## Gameplay commands - always available
+
 `discardclass [class name]` - Discards player's class; requires confirmation.
+
 `discardrace [race name]` - Discards player's race; requires confirmation.
+
 `play [card name]` - Certain cards (Curses, for example) can always be played.
 
 ## Gameplay commands - during player turn
+
 `play [card name]` - Certain cards (Gain Class; etc.) are allowed to be played.
+
 `equip [card name]` - Equip a given card you have in play.
+
 `unequip [card name]` - Unequip a given card you have equipped, leaving it in play.
+
 `sellitems [card name...]` - Sell items totalling more than 1000 gold pieces; for every 1000 gold pieces' worth sold, gain one level; no change given; requires confirmation.
 
 ## Gameplay commands - during player turn sequence
+
 `kickthedoor` - Reveal a Door card, fight monster, get cursed, take the item, etc.
+
 `loottheroom` - If Door kicked down and not attacked, draw a Door card into hand.
+
 `lookfortrouble [card name.]` - Play a monster from your hand and fight it immediately.
+
 `endturn` - Ends the player's turn; requires confirmation.
 
 ## Gameplay commands - during fight
+
 `play [card name] [target]` - Play a card; if a target is needed, provide it.
+
 `slayit` - Deliver a final blow, with a required wait period. Still haven't determined how to play this one.
+
 `runaway` - Initiate the Runaway procedure.
 
 ## Gameplay commands - during fight, other player
+
 `bid [number treasures] [card name...]` - Bid to help the player for the number of treatures listed, providing the following cards.
+
 `bid [pattern treasures] [card name...]` - Bid to help the player for the treatures listed, providing the following cards. The pattern will be P/B repeated; P will mean Player, B will mean bidder.
+
 `takebid [user name]` - Takes last bid from user name, applies it to combat.
 
 # API
